@@ -7,9 +7,9 @@ fun main() {
 
     // read the coordinates of the relevant letters
     File("Day_04/input.txt").readLines().forEachIndexed { row, line ->
-        line.toCharArray().forEachIndexed { index, ch ->
+        line.toCharArray().forEachIndexed { column, ch ->
             if (charCoordinates[ch] == null) charCoordinates[ch] = HashSet()
-            charCoordinates[ch]?.add(row to index)
+            charCoordinates[ch]?.add(row to column)
         }
     }
 
